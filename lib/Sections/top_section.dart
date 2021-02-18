@@ -3,6 +3,7 @@ import "package:webportfolio/Sections/components/glass_content.dart";
 import "package:flutter/material.dart";
 import "package:webportfolio/constants.dart";
 import "package:webportfolio/Sections/components/logo_blur_box.dart";
+import "package:webportfolio/Sections/components/menu.dart";
 
 class TopSection extends StatelessWidget {
   @override
@@ -12,6 +13,7 @@ class TopSection extends StatelessWidget {
         alignment: Alignment.center,
         constraints: BoxConstraints(maxHeight: 900, minHeight: 700),
         width: double.infinity,
+        //height: MediaQuery.of(context).size.height * 0.5,
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -31,7 +33,11 @@ class TopSection extends StatelessWidget {
                       constraints:
                           BoxConstraints(maxWidth: 639, maxHeight: 860),
                       child: Image.asset("assets/images/person.png"),
-                    ))
+                    )),
+                Positioned(
+                  bottom: 0,
+                  child: Menu(),
+                )
               ],
             )));
   }
