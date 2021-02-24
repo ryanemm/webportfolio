@@ -15,7 +15,7 @@ class _MenuState extends State<Menu> {
     "Services",
     "Portfolio",
     "Testimonial",
-    "Contact"
+    "Contact",
   ];
 
   @override
@@ -29,7 +29,8 @@ class _MenuState extends State<Menu> {
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
               topRight: Radius.circular(10),
-            )),
+            ),
+            boxShadow: [kDefaultShadow]),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: List.generate(
@@ -51,31 +52,32 @@ class _MenuState extends State<Menu> {
           });
         },
         child: Container(
-            constraints: BoxConstraints(minWidth: 122),
-            height: 100,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Text(
-                  menuItems[index],
-                  style: TextStyle(fontSize: 20, color: kTextColor),
-                ),
-                //hover
-                AnimatedPositioned(
-                    duration: Duration(milliseconds: 200),
-                    left: 0,
-                    right: 0,
-                    bottom:
-                        selectIndex != index && hoverIndex == index ? -20 : -32,
-                    child: Image.asset("assets/images/hover.png")),
-                //select
-                AnimatedPositioned(
-                    duration: Duration(milliseconds: 200),
-                    left: 0,
-                    right: 0,
-                    bottom: selectIndex == index ? -2 : -32,
-                    child: Image.asset("assets/images/hover.png"))
-              ],
-            )),
+          constraints: BoxConstraints(minWidth: 122),
+          height: 100,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Text(
+                menuItems[index],
+                style: TextStyle(fontSize: 20, color: kTextColor),
+              ),
+              //hover
+              AnimatedPositioned(
+                  duration: Duration(milliseconds: 200),
+                  left: 0,
+                  right: 0,
+                  bottom:
+                      selectIndex != index && hoverIndex == index ? -20 : -32,
+                  child: Image.asset("assets/images/hover.png")),
+              //select
+              AnimatedPositioned(
+                  duration: Duration(milliseconds: 200),
+                  left: 0,
+                  right: 0,
+                  bottom: selectIndex == index ? -2 : -32,
+                  child: Image.asset("assets/images/hover.png"))
+            ],
+          ),
+        ),
       );
 }

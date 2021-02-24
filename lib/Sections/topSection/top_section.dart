@@ -1,9 +1,9 @@
 import 'dart:ui';
-import "package:webportfolio/Sections/components/glass_content.dart";
+import "package:webportfolio/Sections/topSection/glass_content.dart";
 import "package:flutter/material.dart";
 import "package:webportfolio/constants.dart";
-import "package:webportfolio/Sections/components/logo_blur_box.dart";
-import "package:webportfolio/Sections/components/menu.dart";
+import "package:webportfolio/Sections/topSection/logo_blur_box.dart";
+import "package:webportfolio/Sections/topSection/menu.dart";
 
 class TopSection extends StatelessWidget {
   @override
