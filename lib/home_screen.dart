@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:webportfolio/Sections/About/Components/about_section.dart';
 import 'package:webportfolio/Sections/topSection/top_section.dart';
+import 'package:webportfolio/constants.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -8,7 +9,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: [TopSection(), AboutSection(), SizedBox(height: 500)],
+          children: [
+            TopSection(),
+            SizedBox(height: kDefaultPadding * 2),
+            AboutSection(),
+            SizedBox(height: 500)
+          ],
         ),
       ),
     );
