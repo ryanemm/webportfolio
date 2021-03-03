@@ -34,12 +34,14 @@ class AboutSection extends StatelessWidget {
           ),
           SizedBox(height: kDefaultPadding * 2),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MyOutlineButton(
                 imageSrc: "assets/images/hand.png",
                 text: "Hire me",
                 press: () {},
               ),
+              SizedBox(width: kDefaultPadding * 2),
               MyOutlineButton(
                 imageSrc: "assets/images/download.png",
                 text: "Download CV",
