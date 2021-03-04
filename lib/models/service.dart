@@ -13,25 +13,25 @@ List<Service> services = [
   Service(
     id: 1,
     title: "Web Design",
-    image: "assets/images/web_design.jpg",
+    image: "assets/images/web_design.png",
     color: Color(0xFFD9FFFC),
   ),
   Service(
     id: 2,
-    title: "Web Development",
-    image: "assets/images/web_development.jpg",
+    title: "Graphic Design",
+    image: "assets/images/graphic_design.png",
     color: Color(0xFFE4FFC7),
   ),
   Service(
     id: 3,
-    title: "Mobile App Development",
-    image: "assets/images/mobile_dev.jpg",
+    title: "UI Design",
+    image: "assets/images/ui_design.png",
     color: Color(0xFFFFF3DD),
   ),
   Service(
     id: 4,
-    title: "Data Analysis",
-    image: "assets/images/data_analysis.jpg",
+    title: "Code Optimisation",
+    image: "assets/images/code_editing.png",
     color: Color(0xFFFFE0E0),
   ),
 ];
