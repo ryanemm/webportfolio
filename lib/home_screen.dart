@@ -8,6 +8,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Image.asset("assets/images/logo.png", height: 80),
+        //actions: [],
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
