@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Image.asset("assets/images/logo.png", height: 50),
         backgroundColor: Colors.white,
-        elevation: 40,
+        elevation: 20,
         actions: [
           Row(
             children: [
