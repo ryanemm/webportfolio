@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:webportfolio/Sections/About/Components/about_section.dart';
+import 'package:webportfolio/Sections/topSection/redesigned_top.dart';
 import 'package:webportfolio/Sections/topSection/top_section.dart';
 import 'package:webportfolio/constants.dart';
 import "package:webportfolio/Sections/service/components/service_section.dart";

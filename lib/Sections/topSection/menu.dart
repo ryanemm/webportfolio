@@ -14,30 +14,34 @@ class _MenuState extends State<Menu> {
     "About",
     "Services",
     "Portfolio",
-    "Testimonial",
     "Contact",
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
-        constraints: BoxConstraints(maxWidth: 1110),
-        height: 100,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-              topRight: Radius.circular(10),
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
+      constraints: BoxConstraints(maxWidth: 1100),
+      height: 100,
+      decoration: BoxDecoration(
+          color: Colors.grey[100],
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black54,
+              offset: const Offset(3.0, 3.0),
+              blurRadius: 10,
+              spreadRadius: 2,
             ),
-            boxShadow: [kDefaultShadow]),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: List.generate(
-            menuItems.length,
-            (index) => buildMenuItem(index),
-          ),
-        ));
+          ]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: List.generate(
+          menuItems.length,
+          (index) => buildMenuItem(index),
+        ),
+      ),
+    );
   }
 
   Widget buildMenuItem(int index) => InkWell(
@@ -62,20 +66,21 @@ class _MenuState extends State<Menu> {
                 style: TextStyle(fontSize: 20, color: kTextColor),
               ),
               //hover
-              AnimatedPositioned(
+              /*AnimatedPositioned(
                   duration: Duration(milliseconds: 200),
                   left: 0,
                   right: 0,
                   bottom:
                       selectIndex != index && hoverIndex == index ? -20 : -32,
                   child: Image.asset("assets/images/hover.png")),
-              //select
+
+              // select
               AnimatedPositioned(
                   duration: Duration(milliseconds: 200),
                   left: 0,
                   right: 0,
                   bottom: selectIndex == index ? -2 : -32,
-                  child: Image.asset("assets/images/hover.png"))
+                  child: Image.asset("assets/images/hover.png"))*/
             ],
           ),
         ),

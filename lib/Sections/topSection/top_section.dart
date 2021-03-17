@@ -10,35 +10,51 @@ class TopSection extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-        alignment: Alignment.center,
-        constraints: BoxConstraints(maxHeight: 900, minHeight: 700),
-        width: double.infinity,
-        //height: MediaQuery.of(context).size.height * 0.5,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage("assets/images/background.jpg"),
-          ),
-        ),
-        child: Container(
-            margin: EdgeInsets.only(top: kDefaultPadding),
-            width: 1200,
-            child: Stack(
-              children: [
-                LogoAndBlurBox(size: size),
-                Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: Container(
-                      constraints:
-                          BoxConstraints(maxWidth: 639, maxHeight: 860),
-                      child: Image.asset("assets/images/person.png"),
-                    )),
-                Positioned(
+      alignment: Alignment.center,
+      width: double.infinity,
+      child: Stack(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            constraints: BoxConstraints(maxHeight: 900, minHeight: 700),
+            width: double.infinity,
+            margin: EdgeInsets.only(bottom: 50),
+            //height: MediaQuery.of(context).size.height * 0.5,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/images/desk_1.jpg"),
+              ),
+            ),
+            /*child: Container(
+              margin: EdgeInsets.only(top: kDefaultPadding),
+              width: 1200,
+              child: Stack(
+                children: [
+                  //LogoAndBlurBox(size: size),
+                  /*Positioned(
                   bottom: 0,
-                  child: Menu(),
-                )
-              ],
-            )));
+                  right: 0,
+                  child: Container(
+                    constraints: BoxConstraints(maxWidth: 639, maxHeight: 860),
+                    child: Image.asset("assets/images/person.png"),
+                  )),*/
+                  Positioned(
+                    bottom: 0,
+                    child: Menu(),
+                  )
+                ],
+              ),
+            ),*/
+          ),
+          Positioned(
+            left: size.width * 0.2,
+            right: size.width * 0.2,
+            bottom: 0,
+            child: Menu(),
+          ),
+        ],
+      ),
+    );
   }
 }
