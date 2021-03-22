@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:google_fonts/google_fonts.dart';
 import "package:webportfolio/constants.dart";
 
 class AboutSectionText extends StatelessWidget {
@@ -15,8 +16,11 @@ class AboutSectionText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Text(
         text,
-        style: TextStyle(
-            fontWeight: FontWeight.w200, color: kTextColor, height: 2),
+        style: GoogleFonts.raleway(
+            fontWeight: FontWeight.w200, color: Colors.black54, height: 2)
+        /*style: TextStyle(
+            fontWeight: FontWeight.w200, color: kTextColor, height: 2)*/
+        ,
       ),
     );
   }

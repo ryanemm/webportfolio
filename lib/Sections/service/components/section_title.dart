@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:webportfolio/constants.dart";
+import "package:google_fonts/google_fonts.dart";
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
@@ -41,10 +42,10 @@ class SectionTitle extends StatelessWidget {
               ),
               Text(
                 title,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline2
-                    .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+                style: GoogleFonts.satisfy(
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                    fontSize: 65),
               )
             ],
           )

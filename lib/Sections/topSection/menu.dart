@@ -63,7 +63,7 @@ class _MenuState extends State<Menu> {
             children: [
               Text(
                 menuItems[index],
-                style: TextStyle(fontSize: 20, color: kTextColor),
+                style: TextStyle(fontSize: 18, color: kTextColor),
               ),
               //hover
               /*AnimatedPositioned(

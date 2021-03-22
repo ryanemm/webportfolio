@@ -18,11 +18,12 @@ final kDefaultCardShadow = BoxShadow(
 );
 
 //text field design
-const kDefaultInputDecorationTheme = InputDecorationTheme(
+final kDefaultInputDecorationTheme = InputDecorationTheme(
   border: kDefaultOutlineInputBorder,
   enabledBorder: kDefaultOutlineInputBorder,
   focusedBorder: kDefaultOutlineInputBorder,
 );
 
-const kDefaultOutlineInputBorder =
-    OutlineInputBorder(borderSide: BorderSide(color: Color(0xFFCEE4FD)));
+final kDefaultOutlineInputBorder = OutlineInputBorder(
+    //borderRadius: BorderRadius.circular(50),
+    borderSide: BorderSide(color: Color(0xFFCEE4FD)));

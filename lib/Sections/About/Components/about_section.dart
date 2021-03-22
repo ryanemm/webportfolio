@@ -20,7 +20,7 @@ class AboutSection extends StatelessWidget {
               Expanded(
                 child: AboutSectionText(
                     text:
-                        "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto "),
+                        "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto  "),
               ),
               ExperienceCard(
                 numOfExp: "10",
@@ -28,7 +28,7 @@ class AboutSection extends StatelessWidget {
               Expanded(
                 child: AboutSectionText(
                     text:
-                        "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto "),
+                        "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto, Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto  "),
               )
             ],
           ),
