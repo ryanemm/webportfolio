@@ -6,6 +6,7 @@ import 'package:webportfolio/constants.dart';
 import "package:webportfolio/Sections/service/components/service_section.dart";
 import "package:google_fonts/google_fonts.dart";
 import "package:webportfolio/Sections/contact/contact_section.dart";
+import "package:webportfolio/Sections/footer/footer.dart";
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -79,7 +80,8 @@ class HomeScreen extends StatelessWidget {
             AboutSection(),
             ServiceSection(),
             ContactSection(),
-            SizedBox(height: 500)
+            Footer(),
+            //SizedBox(height: 500)
           ],
         ),
       ),
