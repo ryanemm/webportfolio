@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:flutter/rendering.dart';
 import 'package:webportfolio/Sections/About/Components/about_section.dart';
 import 'package:webportfolio/Sections/topSection/redesigned_top.dart';
 import 'package:webportfolio/Sections/topSection/top_section.dart';
@@ -15,6 +16,79 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
+        preferredSize: Size(
+          screenSize.width,
+          screenSize.height * 0.15,
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.black.withOpacity(0.9),
+                Colors.grey[700].withOpacity(0.6),
+                Colors.grey[400].withOpacity(0.25),
+                Colors.grey[200].withOpacity(0.2),
+                Colors.white.withOpacity(0.1),
+              ],
+              stops: [0.1, 0.5, 0.7, 0.8, 0.9],
+            ),
+          ),
+          child: Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "About",
+                  style: GoogleFonts.raleway(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                      fontSize: 15),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/images/logo.png",
+                      height: 50,
+                    )
+                  ],
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "Sign up",
+                    style: GoogleFonts.raleway(
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 15),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            TopSection(),
+            SizedBox(height: kDefaultPadding * 2),
+            AboutSection(),
+            ServiceSection(),
+            ContactSection(),
+            Footer(),
+            //SizedBox(height: 500)
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/*appBar: PreferredSize(
         preferredSize: Size(
           screenSize.width,
           screenSize.height * 0.1,
@@ -71,20 +145,4 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TopSection(),
-            SizedBox(height: kDefaultPadding * 2),
-            AboutSection(),
-            ServiceSection(),
-            ContactSection(),
-            Footer(),
-            //SizedBox(height: 500)
-          ],
-        ),
-      ),
-    );
-  }
-}
+      ),*/
