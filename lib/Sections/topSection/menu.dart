@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webportfolio/constants.dart';
+import "package:google_fonts/google_fonts.dart";
 
 class Menu extends StatefulWidget {
   @override
@@ -10,19 +11,22 @@ class _MenuState extends State<Menu> {
   int selectIndex = 0;
   int hoverIndex = 0;
   List<String> menuItems = [
-    "Home",
     "About",
+    "|",
     "Services",
+    "|",
     "Portfolio",
+    "|",
     "Contact",
   ];
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
-      constraints: BoxConstraints(maxWidth: 1100),
-      height: 100,
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      constraints: BoxConstraints(minWidth: size.width * 0.5),
+      height: size.height * 0.08,
       decoration: BoxDecoration(
           color: Colors.grey[100],
           borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -35,7 +39,7 @@ class _MenuState extends State<Menu> {
             ),
           ]),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: List.generate(
           menuItems.length,
           (index) => buildMenuItem(index),
@@ -56,14 +60,16 @@ class _MenuState extends State<Menu> {
           });
         },
         child: Container(
-          constraints: BoxConstraints(minWidth: 122),
-          height: 100,
           child: Stack(
             alignment: Alignment.center,
             children: [
               Text(
                 menuItems[index],
-                style: TextStyle(fontSize: 18, color: kTextColor),
+                style: GoogleFonts.raleway(
+                  color: kTextColor,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                ),
               ),
               //hover
               /*AnimatedPositioned(

@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                 Text(
                   "About",
                   style: GoogleFonts.raleway(
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Colors.white,
                       fontSize: 15),
                 ),
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                   child: Text(
                     "Sign up",
                     style: GoogleFonts.raleway(
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w400,
                         color: Colors.white,
                         fontSize: 15),
                   ),

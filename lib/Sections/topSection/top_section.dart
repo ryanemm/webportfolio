@@ -16,9 +16,12 @@ class TopSection extends StatelessWidget {
         children: [
           Container(
             alignment: Alignment.center,
-            constraints: BoxConstraints(maxHeight: 900, minHeight: 700),
+            constraints: BoxConstraints(
+              maxHeight: size.height * 0.5,
+              minHeight: size.height * 0.4,
+            ),
             width: double.infinity,
-            margin: EdgeInsets.only(bottom: 55),
+            margin: EdgeInsets.only(bottom: 25),
             //height: MediaQuery.of(context).size.height * 0.5,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -48,8 +51,8 @@ class TopSection extends StatelessWidget {
             ),*/
           ),
           Positioned(
-            left: size.width * 0.2,
-            right: size.width * 0.2,
+            left: size.width * 0.15,
+            right: size.width * 0.15,
             bottom: 0,
             child: Menu(),
           ),
