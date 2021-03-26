@@ -8,9 +8,11 @@ class SectionTitle extends StatelessWidget {
     this.title,
     this.color,
     this.subtitle,
+    this.ftSize,
   }) : super(key: key);
 
   final String title, subtitle;
+  final double ftSize;
   final Color color;
 
   @override
@@ -43,9 +45,9 @@ class SectionTitle extends StatelessWidget {
               Text(
                 title,
                 style: GoogleFonts.satisfy(
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w500,
                     color: Colors.black,
-                    fontSize: 65),
+                    fontSize: ftSize),
               )
             ],
           )

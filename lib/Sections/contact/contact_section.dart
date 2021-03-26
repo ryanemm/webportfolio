@@ -19,6 +19,7 @@ class ContactSection extends StatelessWidget {
             title: "Contact Me",
             subtitle: "For project inquiry and information",
             color: Color(0xFF07E24A),
+            ftSize: 35,
           ),
           ContactBox()
         ],
