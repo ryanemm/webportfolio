@@ -15,13 +15,13 @@ class AboutTextWithSign extends StatelessWidget {
         Text(
           "About \nmy story",
           style: GoogleFonts.satisfy(
-              fontWeight: FontWeight.w700, color: Colors.black, fontSize: 50),
+              fontWeight: FontWeight.w500, color: Colors.black, fontSize: 30),
           /*style: Theme.of(context)
               .textTheme
               .headline2
               .copyWith(fontWeight: FontWeight.bold, color: Colors.black)*/
         ),
-        SizedBox(height: kDefaultPadding * 2),
+        SizedBox(height: kDefaultPadding),
         Image.asset("assets/images/sign.png"),
       ],
     );

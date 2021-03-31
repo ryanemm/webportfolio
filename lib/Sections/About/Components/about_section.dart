@@ -11,6 +11,7 @@ class AboutSection extends StatelessWidget {
   Widget build(BuildContext context) {
     var isLandscape =
         MediaQuery.of(context).orientation == Orientation.landscape;
+    Size _screenSize = MediaQuery.of(context).size;
 
     Widget child;
 
@@ -62,16 +63,20 @@ class AboutSection extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AboutTextWithSign(),
-                  Expanded(
-                    child: AboutSectionText(
+              SizedBox(
+                height: _screenSize.height * 0.4,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    AboutTextWithSign(),
+                    Expanded(
+                      child: AboutSectionText(
                         text:
-                            "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto  "),
-                  ),
-                ],
+                            "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto  ",
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Row(
                 children: [

@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             TopSection(),
-            SizedBox(height: kDefaultPadding * 2),
+            SizedBox(height: kDefaultPadding * 1.25),
             AboutSection(),
             ServiceSection(),
             ContactSection(),

@@ -16,8 +16,9 @@ class AboutSectionText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Text(
         text,
+        textAlign: TextAlign.justify,
         style: GoogleFonts.raleway(
-            fontWeight: FontWeight.w200, color: Colors.black54, height: 2)
+            fontWeight: FontWeight.w200, color: Colors.black87, height: 2)
         /*style: TextStyle(
             fontWeight: FontWeight.w200, color: kTextColor, height: 2)*/
         ,
