@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/models/Feedback.dart';
+import 'package:webportfolio/models/feedback.dart';
 
 import '../../../constants.dart';
 

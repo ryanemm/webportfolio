@@ -8,6 +8,8 @@ import "package:webportfolio/Sections/service/components/service_section.dart";
 import "package:google_fonts/google_fonts.dart";
 import "package:webportfolio/Sections/contact/contact_section.dart";
 import "package:webportfolio/Sections/footer/footer.dart";
+import "package:webportfolio/Sections/recentWork/recent_work.dart";
+import "package:webportfolio/Sections/feedback/feedback_section.dart";
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -78,6 +80,8 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: kDefaultPadding * 1.25),
             AboutSection(),
             ServiceSection(),
+            //RecentWorkSection(),
+            FeedbackSection(),
             ContactSection(),
             Footer(),
             //SizedBox(height: 500)

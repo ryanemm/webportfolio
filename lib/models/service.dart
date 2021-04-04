@@ -14,13 +14,13 @@ List<Service> services = [
     id: 1,
     title: "Web Design",
     image: "/assets/images/web_design.png",
-    color: Color(0xFFD9FFFC),
+    color: Color(0xFFFFF3DD),
   ),
   Service(
     id: 2,
     title: "Graphic Design",
     image: "/assets/images/graphic_design.png",
-    color: Color(0xFFE4FFC7),
+    color: Color(0xFFFFF3DD),
   ),
   Service(
     id: 3,
@@ -32,6 +32,6 @@ List<Service> services = [
     id: 4,
     title: "Code Optimisation",
     image: "/assets/images/code_editing.png",
-    color: Color(0xFFFFE0E0),
+    color: Color(0xFFFFF3DD),
   ),
 ];

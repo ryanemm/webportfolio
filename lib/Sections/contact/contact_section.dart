@@ -14,19 +14,22 @@ class ContactSection extends StatelessWidget {
 
     if (isLandscape) {
       child = Container(
+        margin: EdgeInsets.only(top: kDefaultPadding * 2),
+        padding: EdgeInsets.all(kDefaultPadding * 3),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.grey[50],
         ),
         child: Column(
           children: [
-            SizedBox(height: kDefaultPadding * 2.5),
+            SizedBox(height: kDefaultPadding),
             SectionTitle(
               title: "Contact Me",
               subtitle: "For project inquiry and information",
-              color: Color(0xFF07E24A),
+              color: Color(0xFF00B1FF),
               ftSize: 55,
             ),
+            SizedBox(height: kDefaultPadding * 0.5),
             ContactBox()
           ],
         ),
@@ -43,7 +46,7 @@ class ContactSection extends StatelessWidget {
             SectionTitle(
               title: "Contact Me",
               subtitle: "For project inquiry and information",
-              color: Color(0xFF07E24A),
+              color: Color(0xFF00B1FF),
               ftSize: 35,
             ),
             ContactBoxMobile()
@@ -64,10 +67,10 @@ class ContactBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(maxWidth: 1110),
-      margin: EdgeInsets.only(top: kDefaultPadding * 2),
-      padding: EdgeInsets.all(kDefaultPadding * 3),
+      //margin: EdgeInsets.only(top: kDefaultPadding * 2),
+      //padding: EdgeInsets.all(kDefaultPadding * 3),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.grey[50],
       ),
       child: Column(
         children: [
@@ -75,19 +78,19 @@ class ContactBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SocialCard(
-                color: Color(0xFFD9FFFC),
+                color: Color(0xFFFFF3DD),
                 iconSrc: "assets/images/whatsapp.png",
                 name: "WhatsApp",
                 press: () {},
               ),
               SocialCard(
-                color: Color(0xFFD9FFFC),
+                color: Color(0xFFFFF3DD),
                 iconSrc: "assets/images/twitter.png",
                 name: "Twitter",
                 press: () {},
               ),
               SocialCard(
-                color: Color(0xFFD9FFFC),
+                color: Color(0xFFFFF3DD),
                 iconSrc: "assets/images/linkedin.png",
                 name: "Linked In",
                 press: () {},
@@ -122,19 +125,19 @@ class ContactBoxMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SocialCardMobile(
-                color: Color(0xFFD9FFFC),
+                color: Color(0xFFFFF3DD),
                 iconSrc: "assets/images/whatsapp.png",
                 name: "WhatsApp",
                 press: () {},
               ),
               SocialCardMobile(
-                color: Color(0xFFD9FFFC),
+                color: Color(0xFFFFF3DD),
                 iconSrc: "assets/images/twitter.png",
                 name: "Twitter",
                 press: () {},
               ),
               SocialCardMobile(
-                color: Color(0xFFD9FFFC),
+                color: Color(0xFFFFF3DD),
                 iconSrc: "assets/images/linkedin.png",
                 name: "Linked In",
                 press: () {},
@@ -157,6 +160,7 @@ class ContactForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.grey[50],
       child: Form(
         child: Wrap(
           spacing: kDefaultPadding * 2.5,
@@ -208,7 +212,7 @@ class ContactForm extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: kDefaultPadding * 2),
+            SizedBox(height: kDefaultPadding * 1),
             Center(
               child: FittedBox(
                 child: MyOutlineButton(
@@ -217,7 +221,8 @@ class ContactForm extends StatelessWidget {
                   press: () {},
                 ),
               ),
-            )
+            ),
+            SizedBox(height: kDefaultPadding * 1),
           ],
         ),
       ),

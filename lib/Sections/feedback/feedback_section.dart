@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/section_title.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/models/Feedback.dart';
+import 'package:webportfolio/Sections/service/components/section_title.dart';
+import 'package:webportfolio/constants.dart';
+import 'package:webportfolio/models/feedback.dart';
 
-import 'components/feedback_card.dart';
+import 'package:webportfolio/Sections/feedback/Components/feedback_card.dart';
 
 class FeedbackSection extends StatelessWidget {
   @override
@@ -15,7 +15,8 @@ class FeedbackSection extends StatelessWidget {
         children: [
           SectionTitle(
             title: "Feedback Received",
-            subTitle: "Client’s testimonials that inspired me a lot",
+            ftSize: 55,
+            subtitle: "Client’s testimonials that inspired me a lot",
             color: Color(0xFF00B1FF),
           ),
           SizedBox(height: kDefaultPadding),
@@ -31,4 +32,3 @@ class FeedbackSection extends StatelessWidget {
     );
   }
 }
-

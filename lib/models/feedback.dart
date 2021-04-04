@@ -13,21 +13,24 @@ List<Feedback> feedbacks = [
   Feedback(
     id: 1,
     name: "Ronald Thompson",
-    review: "review",
+    review:
+        "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto.",
     userPic: "assets/images/people.jpg",
     color: Color(0xFFFFF3DD),
   ),
   Feedback(
     id: 1,
     name: "Ronald Thompson",
-    review: "review",
+    review:
+        "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto.",
     userPic: "assets/images/people.jpg",
     color: Color(0xFFFFF3DD),
   ),
   Feedback(
     id: 1,
     name: "Ronald Thompson",
-    review: "review",
+    review:
+        "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto.",
     userPic: "assets/images/people.jpg",
     color: Color(0xFFFFF3DD),
   ),

@@ -1,5 +1,9 @@
 import "package:flutter/material.dart";
 import 'package:webportfolio/Sections/service/components/section_title.dart';
+import "package:webportfolio/constants.dart";
+import "package:webportfolio/models/recentWork.dart";
+import "package:webportfolio/Sections/recentWork/Components/recent_work_card.dart";
+import "package:webportfolio/components/hire_me.dart";
 
 class RecentWorkSection extends StatelessWidget {
   @override
@@ -23,15 +27,16 @@ class RecentWorkSection extends StatelessWidget {
             child: HireMeCard(),
           ),
           SectionTitle(
-            title: "Recent Woorks",
-            subTitle: "My Strong Arenas",
+            title: "Recent Works",
+            ftSize: 50,
+            subtitle: "My Strong Arenas",
             color: Color(0xFFFFB100),
           ),
           SizedBox(height: kDefaultPadding * 1.5),
           SizedBox(
             width: 1110,
             child: Wrap(
-              spacing: kDefaultPadding,
+              spacing: 20,
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
                 recentWorks.length,
@@ -45,4 +50,3 @@ class RecentWorkSection extends StatelessWidget {
     );
   }
 }
-

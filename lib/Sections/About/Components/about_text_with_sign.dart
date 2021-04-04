@@ -15,7 +15,7 @@ class AboutTextWithSign extends StatelessWidget {
         Text(
           "About \nmy story",
           style: GoogleFonts.satisfy(
-              fontWeight: FontWeight.w500, color: Colors.black, fontSize: 30),
+              fontWeight: FontWeight.w500, color: Colors.black, fontSize: 40),
           /*style: Theme.of(context)
               .textTheme
               .headline2

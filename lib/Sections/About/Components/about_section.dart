@@ -17,6 +17,8 @@ class AboutSection extends StatelessWidget {
 
     if (isLandscape) {
       child = Container(
+        margin: EdgeInsets.symmetric(
+            vertical: kDefaultPadding, horizontal: _screenSize.width * 0.1),
         child: Column(
           children: [
             Row(
@@ -39,7 +41,7 @@ class AboutSection extends StatelessWidget {
               ],
             ),
             SizedBox(height: kDefaultPadding * 2),
-            Row(
+            /*Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MyOutlineButton(
@@ -54,7 +56,7 @@ class AboutSection extends StatelessWidget {
                   press: () {},
                 )
               ],
-            ),
+            ),*/
           ],
         ),
       );

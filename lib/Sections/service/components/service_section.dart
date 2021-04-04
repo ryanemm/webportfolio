@@ -29,7 +29,7 @@ class ServiceSection extends StatelessWidget {
                 color: Color(0xFFFF0000),
                 title: "Service Offerings",
                 subtitle: "My Strong Areas",
-                ftSize: 60,
+                ftSize: 55,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

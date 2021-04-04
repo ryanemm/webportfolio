@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/models/RecentWork.dart';
+import 'package:webportfolio/models/recentWork.dart';
 
 import '../../../constants.dart';
 
@@ -35,12 +35,16 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         width: 540,
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(20),
           boxShadow: [if (isHover) kDefaultCardShadow],
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset(recentWorks[widget.index].image),
+            Image.asset(
+              recentWorks[widget.index].image,
+              fit: BoxFit.fitHeight,
+            ),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -72,4 +76,3 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
     );
   }
 }
-
