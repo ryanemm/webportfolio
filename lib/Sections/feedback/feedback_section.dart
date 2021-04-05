@@ -4,6 +4,7 @@ import 'package:webportfolio/constants.dart';
 import 'package:webportfolio/models/feedback.dart';
 
 import 'package:webportfolio/Sections/feedback/Components/feedback_card.dart';
+import "package:webportfolio/components/hire_me.dart";
 
 class FeedbackSection extends StatelessWidget {
   @override
@@ -13,6 +14,8 @@ class FeedbackSection extends StatelessWidget {
       constraints: BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
+          HireMeCard(),
+          SizedBox(height: 20),
           SectionTitle(
             title: "Feedback Received",
             ftSize: 55,

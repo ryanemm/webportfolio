@@ -216,7 +216,7 @@ class ContactForm extends StatelessWidget {
             Center(
               child: FittedBox(
                 child: MyOutlineButton(
-                  imageSrc: "assets/images/contact_icon.png",
+                  imageSrc: "assets/images/submit.png",
                   text: "Contact Me!",
                   press: () {},
                 ),

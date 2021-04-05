@@ -26,7 +26,7 @@ class ServiceSection extends StatelessWidget {
           child: Column(
             children: [
               SectionTitle(
-                color: Color(0xFFFF0000),
+                color: Color(0xFF00B1FF),
                 title: "Service Offerings",
                 subtitle: "My Strong Areas",
                 ftSize: 55,
@@ -54,7 +54,7 @@ class ServiceSection extends StatelessWidget {
           child: Column(
             children: [
               SectionTitle(
-                color: Color(0xFFFF0000),
+                color: Color(0xFF00B1FF),
                 title: "Service Offerings",
                 subtitle: "My strong areas",
                 ftSize: 30,

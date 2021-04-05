@@ -16,7 +16,14 @@ class HireMeCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: [kDefaultShadow],
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black54,
+            offset: Offset(0, 20),
+            blurRadius: 20,
+          )
+          //  spreadRadius: 2),
+        ],
       ),
       child: Row(
         children: [
@@ -50,7 +57,7 @@ class HireMeCard extends StatelessWidget {
           ),
           MyOutlineButton(
             text: "Hire Me!",
-            imageSrc: "assets/images/hand.png",
+            imageSrc: "assets/images/hire_me.png",
             press: () {},
           )
         ],

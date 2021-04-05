@@ -18,7 +18,7 @@ class AboutSectionText extends StatelessWidget {
         text,
         textAlign: TextAlign.justify,
         style: GoogleFonts.raleway(
-            fontWeight: FontWeight.w200, color: Colors.black87, height: 2)
+            fontWeight: FontWeight.w400, color: Colors.black87, height: 2)
         /*style: TextStyle(
             fontWeight: FontWeight.w200, color: kTextColor, height: 2)*/
         ,
