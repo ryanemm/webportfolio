@@ -14,7 +14,7 @@ class FeedbackSection extends StatelessWidget {
       constraints: BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
-          HireMeCard(),
+          //HireMeCard(),
           SizedBox(height: 20),
           SectionTitle(
             title: "Feedback Received",

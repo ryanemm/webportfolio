@@ -30,8 +30,8 @@ class _ServiceCardState extends State<ServiceCard> {
       child: AnimatedContainer(
         duration: duration,
         margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
-        height: 256,
-        width: 256,
+        height: 210,
+        width: 210,
         decoration: BoxDecoration(
           color: services[widget.index].color,
           borderRadius: BorderRadius.circular(10),

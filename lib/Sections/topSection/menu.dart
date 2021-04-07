@@ -10,7 +10,7 @@ class Menu extends StatefulWidget {
 class _MenuState extends State<Menu> {
   int selectIndex = 0;
   int hoverIndex = 0;
-  List isHovering = [false, false, false, false];
+  List _isHovering = [false, false, false, false];
   List<String> menuItems = [
     "About",
     "|",
@@ -33,8 +33,8 @@ class _MenuState extends State<Menu> {
             borderRadius: BorderRadius.all(Radius.circular(10)),
             boxShadow: [
               BoxShadow(
-                color: Colors.black54,
-                offset: const Offset(3.0, 3.0),
+                color: Colors.black38,
+                offset: const Offset(0, 10),
                 blurRadius: 10,
                 spreadRadius: 2,
               ),
@@ -43,9 +43,10 @@ class _MenuState extends State<Menu> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             InkWell(
+              onTap: () {},
               onHover: (value) {
                 setState(() {
-                  isHovering[0] = value;
+                  _isHovering[0] = value;
                 });
               },
               child: Column(
@@ -54,23 +55,23 @@ class _MenuState extends State<Menu> {
                   Text(
                     menuItems[0],
                     style: GoogleFonts.raleway(
-                      color: isHovering[0] ? Colors.blue : kTextColor,
+                      color: _isHovering[0] ? Colors.blue : kTextColor,
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
                     ),
                   ),
-                  /*SizedBox(height: 5),
+                  SizedBox(height: 5),
                   Visibility(
                     maintainAnimation: true,
                     maintainState: true,
                     maintainSize: true,
-                    visible: isHovering[0],
+                    visible: _isHovering[0],
                     child: Container(
                       height: 2,
-                      width: 20,
+                      width: 50,
                       color: Colors.blue,
                     ),
-                  )*/
+                  ),
                 ],
               ),
             ),
@@ -83,20 +84,33 @@ class _MenuState extends State<Menu> {
               ),
             ),
             InkWell(
+              onTap: () {},
               onHover: (value) {
                 setState(() {
-                  isHovering[1] = value;
+                  _isHovering[1] = value;
                 });
               },
-              child: Stack(
-                alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     menuItems[2],
                     style: GoogleFonts.raleway(
-                      color: isHovering[1] ? kTextColor : Colors.blue,
+                      color: _isHovering[1] ? Colors.blue : kTextColor,
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Visibility(
+                    maintainAnimation: true,
+                    maintainState: true,
+                    maintainSize: true,
+                    visible: _isHovering[1],
+                    child: Container(
+                      height: 2,
+                      width: 50,
+                      color: Colors.blue,
                     ),
                   ),
                 ],
@@ -111,20 +125,33 @@ class _MenuState extends State<Menu> {
               ),
             ),
             InkWell(
+              onTap: () {},
               onHover: (value) {
                 setState(() {
-                  isHovering[2] = value;
+                  _isHovering[2] = value;
                 });
               },
-              child: Stack(
-                alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     menuItems[4],
                     style: GoogleFonts.raleway(
-                      color: isHovering[2] ? kTextColor : Colors.blue,
+                      color: _isHovering[2] ? Colors.blue : kTextColor,
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Visibility(
+                    maintainAnimation: true,
+                    maintainState: true,
+                    maintainSize: true,
+                    visible: _isHovering[2],
+                    child: Container(
+                      height: 2,
+                      width: 50,
+                      color: Colors.blue,
                     ),
                   ),
                 ],
@@ -139,20 +166,33 @@ class _MenuState extends State<Menu> {
               ),
             ),
             InkWell(
+              onTap: () {},
               onHover: (value) {
                 setState(() {
-                  isHovering[3] = value;
+                  _isHovering[3] = value;
                 });
               },
-              child: Stack(
-                alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     menuItems[6],
                     style: GoogleFonts.raleway(
-                      color: isHovering[3] ? kTextColor : Colors.blue,
+                      color: _isHovering[3] ? Colors.blue : kTextColor,
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Visibility(
+                    maintainAnimation: true,
+                    maintainState: true,
+                    maintainSize: true,
+                    visible: _isHovering[3],
+                    child: Container(
+                      height: 2,
+                      width: 50,
+                      color: Colors.blue,
                     ),
                   ),
                 ],

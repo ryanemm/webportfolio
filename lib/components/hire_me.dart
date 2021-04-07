@@ -11,14 +11,14 @@ class HireMeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(kDefaultPadding * 2),
+      padding: EdgeInsets.all(kDefaultPadding * 1.2),
       constraints: BoxConstraints(maxWidth: 1110),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.grey[50],
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.black54,
+            color: Colors.black38,
             offset: Offset(0, 20),
             blurRadius: 20,
           )

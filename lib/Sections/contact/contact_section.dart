@@ -14,8 +14,11 @@ class ContactSection extends StatelessWidget {
 
     if (isLandscape) {
       child = Container(
-        margin: EdgeInsets.only(top: kDefaultPadding * 2),
-        padding: EdgeInsets.all(kDefaultPadding * 3),
+        margin: EdgeInsets.only(top: kDefaultPadding * 0.01),
+        padding: EdgeInsets.only(
+            bottom: kDefaultPadding * 3,
+            right: kDefaultPadding * 3,
+            left: kDefaultPadding * 3),
         width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.grey[50],
