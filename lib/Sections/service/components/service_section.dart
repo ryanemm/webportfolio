@@ -6,7 +6,12 @@ import "package:webportfolio/models/service.dart";
 import "package:webportfolio/Sections/service/components/service_card.dart";
 import "package:webportfolio/components/hire_me.dart";
 
-class ServiceSection extends StatelessWidget {
+class ServiceSection extends StatefulWidget {
+  @override
+  _ServiceSectionState createState() => _ServiceSectionState();
+}
+
+class _ServiceSectionState extends State<ServiceSection> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

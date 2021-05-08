@@ -6,6 +6,11 @@ import "package:webportfolio/Sections/contact/components/social_card.dart";
 import "package:webportfolio/Sections/contact/components/social_card_mobile.dart";
 
 class ContactSection extends StatelessWidget {
+  const ContactSection({
+    Key key,
+    this.dataKey,
+  }) : super(key: key);
+  final GlobalKey dataKey;
   @override
   Widget build(BuildContext context) {
     var isLandscape =

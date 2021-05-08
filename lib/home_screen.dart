@@ -8,16 +8,20 @@ import "package:webportfolio/Sections/service/components/service_section.dart";
 import "package:google_fonts/google_fonts.dart";
 import "package:webportfolio/Sections/contact/contact_section.dart";
 import "package:webportfolio/Sections/footer/footer.dart";
-import "package:webportfolio/Sections/recentWork/recent_work.dart";
+import "package:webportfolio/Sections/topSection/menu.dart" as menu;
 import "package:webportfolio/Sections/feedback/feedback_section.dart";
+import "package:lazy_load_scrollview/lazy_load_scrollview.dart";
 
 class HomeScreen extends StatelessWidget {
+  GlobalKey dataKeyo = GlobalKey();
+  ScrollController scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: PreferredSize(
+      //extendBodyBehindAppBar: true,
+      /*appBar: PreferredSize(
         preferredSize: Size(
           screenSize.width,
           screenSize.height * 0.15,
@@ -72,8 +76,9 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
+      ),*/
       body: SingleChildScrollView(
+        controller: scrollController,
         child: Column(
           children: [
             TopSection(),

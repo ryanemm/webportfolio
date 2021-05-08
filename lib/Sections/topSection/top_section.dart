@@ -1,9 +1,11 @@
 import 'dart:ui';
+import 'package:google_fonts/google_fonts.dart';
 import "package:webportfolio/Sections/topSection/glass_content.dart";
 import "package:flutter/material.dart";
 import "package:webportfolio/constants.dart";
 import "package:webportfolio/Sections/topSection/logo_blur_box.dart";
 import "package:webportfolio/Sections/topSection/menu.dart";
+import "package:delayed_display/delayed_display.dart";
 
 class TopSection extends StatelessWidget {
   @override
@@ -29,26 +31,23 @@ class TopSection extends StatelessWidget {
                 image: AssetImage("assets/images/desk_1.jpg"),
               ),
             ),
-            /*child: Container(
-              margin: EdgeInsets.only(top: kDefaultPadding),
-              width: 1200,
-              child: Stack(
-                children: [
-                  //LogoAndBlurBox(size: size),
-                  /*Positioned(
-                  bottom: 0,
-                  right: 0,
-                  child: Container(
-                    constraints: BoxConstraints(maxWidth: 639, maxHeight: 860),
-                    child: Image.asset("assets/images/person.png"),
-                  )),*/
-                  Positioned(
-                    bottom: 0,
-                    child: Menu(),
-                  )
-                ],
+          ),
+          Positioned(
+            left: size.width * 0.1,
+            top: size.width * 0.125,
+            child: DelayedDisplay(
+              delay: Duration(seconds: 5),
+              fadeIn: true,
+              child: Text(
+                "Hi I'm Melissa",
+                style: GoogleFonts.raleway(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                  fontSize: 50,
+                  //height: 2,
+                ),
               ),
-            ),*/
+            ),
           ),
           Positioned(
             left: size.width * 0.15,

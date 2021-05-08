@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:webportfolio/constants.dart';
 import "package:google_fonts/google_fonts.dart";
+import "package:webportfolio/home_screen.dart" as home_screen;
+import "package:webportfolio/Sections/contact/contact_section.dart" as contact;
 
 class Menu extends StatefulWidget {
   @override
@@ -8,6 +10,7 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+  final dataKey = GlobalKey();
   int selectIndex = 0;
   int hoverIndex = 0;
   List _isHovering = [false, false, false, false];
@@ -20,6 +23,7 @@ class _MenuState extends State<Menu> {
     "|",
     "Contact",
   ];
+  ScrollController controller = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -214,6 +218,7 @@ class _MenuState extends State<Menu> {
         onTap: () {
           setState(() {
             selectIndex = index;
+            Scrollable.ensureVisible(dataKey.currentContext);
           });
         },
         onHover: (value) {
