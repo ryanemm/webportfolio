@@ -1,3 +1,4 @@
+import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:webportfolio/models/feedback.dart';
 
@@ -7,9 +8,11 @@ class FeedbackCard extends StatefulWidget {
   const FeedbackCard({
     Key key,
     this.index,
+    this.showDuration,
   }) : super(key: key);
 
   final int index;
+  final int showDuration;
 
   @override
   _FeedbackCardState createState() => _FeedbackCardState();
@@ -18,64 +21,67 @@ class FeedbackCard extends StatefulWidget {
 class _FeedbackCardState extends State<FeedbackCard> {
   Duration duration = Duration(milliseconds: 200);
   bool isHover = false;
+  int showDuration;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      hoverColor: Colors.transparent,
-      onHover: (value) {
-        setState(() {
-          isHover = value;
-        });
-      },
-      child: AnimatedContainer(
-        duration: duration,
-        margin: EdgeInsets.only(top: kDefaultPadding * 3),
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        height: 350,
-        width: 350,
-        decoration: BoxDecoration(
-          color: feedbacks[widget.index].color,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [if (isHover) kDefaultCardShadow],
-        ),
-        child: Column(
-          children: [
-            Transform.translate(
-              offset: Offset(0, -55),
-              child: AnimatedContainer(
-                duration: duration,
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white, width: 10),
-                  boxShadow: [if (!isHover) kDefaultCardShadow],
-                  image: DecorationImage(
-                    image: AssetImage(feedbacks[widget.index].userPic),
+    return DelayedDisplay(
+      delay: Duration(seconds: showDuration),
+      child: InkWell(
+        onTap: () {},
+        hoverColor: Colors.transparent,
+        onHover: (value) {
+          setState(() {
+            isHover = value;
+          });
+        },
+        child: AnimatedContainer(
+          duration: duration,
+          margin: EdgeInsets.only(top: kDefaultPadding * 3),
+          padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          height: 350,
+          width: 350,
+          decoration: BoxDecoration(
+            color: feedbacks[widget.index].color,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [if (isHover) kDefaultCardShadow],
+          ),
+          child: Column(
+            children: [
+              Transform.translate(
+                offset: Offset(0, -55),
+                child: AnimatedContainer(
+                  duration: duration,
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white, width: 10),
+                    boxShadow: [if (!isHover) kDefaultCardShadow],
+                    image: DecorationImage(
+                      image: AssetImage(feedbacks[widget.index].userPic),
+                    ),
                   ),
                 ),
               ),
-            ),
-            Text(
-              feedbacks[widget.index].review,
-              style: TextStyle(
-                color: kTextColor,
-                fontSize: 18,
-                fontWeight: FontWeight.w300,
-                fontStyle: FontStyle.italic,
-                height: 1.5,
+              Text(
+                feedbacks[widget.index].review,
+                style: TextStyle(
+                  color: kTextColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w300,
+                  fontStyle: FontStyle.italic,
+                  height: 1.5,
+                ),
               ),
-            ),
-            SizedBox(height: kDefaultPadding * 2),
-            Text(
-              "Ronald Thompson",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )
-          ],
+              SizedBox(height: kDefaultPadding * 2),
+              Text(
+                "Ronald Thompson",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 }
-

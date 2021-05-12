@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:webportfolio/Sections/About/Components/about_section.dart';
 import 'package:webportfolio/Sections/topSection/redesigned_top.dart';
 import 'package:webportfolio/Sections/topSection/top_section.dart';
+import 'package:webportfolio/components/email_bar.dart';
 import 'package:webportfolio/constants.dart';
 import "package:webportfolio/Sections/service/components/service_section.dart";
 import "package:google_fonts/google_fonts.dart";
@@ -11,147 +12,76 @@ import "package:webportfolio/Sections/footer/footer.dart";
 import "package:webportfolio/Sections/topSection/menu.dart" as menu;
 import "package:webportfolio/Sections/feedback/feedback_section.dart";
 import "package:lazy_load_scrollview/lazy_load_scrollview.dart";
+import "package:webportfolio/components/social_bar.dart";
+import "package:webportfolio/components/app_bar.dart";
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   GlobalKey dataKeyo = GlobalKey();
-  ScrollController scrollController = ScrollController();
+  List<Widget> sectionsBank = [
+    TopSection(),
+    SizedBox(height: kDefaultPadding * 1.25),
+    AboutSection(),
+    ServiceSection(),
+    //RecentWorkSection(),
+    FeedbackSection(),
+    ContactSection(),
+    Footer(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
-      //extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: true,
       /*appBar: PreferredSize(
         preferredSize: Size(
           screenSize.width,
           screenSize.height * 0.15,
         ),
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Colors.black.withOpacity(0.9),
-                Colors.grey[700].withOpacity(0.6),
-                Colors.grey[400].withOpacity(0.25),
-                Colors.grey[200].withOpacity(0.2),
-                Colors.white.withOpacity(0.1),
-              ],
-              stops: [0.1, 0.5, 0.7, 0.8, 0.9],
-            ),
-          ),
-          child: Padding(
-            padding: EdgeInsets.only(left: 10, right: 10, bottom: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "About",
-                  style: GoogleFonts.raleway(
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
-                      fontSize: 15),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      "assets/images/logo.png",
-                      height: 50,
-                    )
-                  ],
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Text(
-                    "Sign up",
-                    style: GoogleFonts.raleway(
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white,
-                        fontSize: 15),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
+        child: CustomAppBar(),
       ),*/
-      body: SingleChildScrollView(
-        controller: scrollController,
-        child: Column(
-          children: [
-            TopSection(),
-            SizedBox(height: kDefaultPadding * 1.25),
-            AboutSection(),
-            ServiceSection(),
-            //RecentWorkSection(),
-            FeedbackSection(),
-            ContactSection(),
-            Footer(),
-            //SizedBox(height: 500)
-          ],
-        ),
-      ),
+      body: buildList(),
+    );
+  }
+
+  Widget buildList() {
+    return ListView.builder(
+      itemCount: 7,
+      itemBuilder: (BuildContext context, int index) {
+        return sectionsBank.elementAt(index);
+      },
     );
   }
 }
 
-/*appBar: PreferredSize(
-        preferredSize: Size(
-          screenSize.width,
-          screenSize.height * 0.1,
-        ),
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Colors.black.withOpacity(0.9),
-                Colors.grey[700].withOpacity(0.6),
-                Colors.grey[400].withOpacity(0.25),
-                Colors.white.withOpacity(0.1),
-              ],
-              stops: [0.1, 0.6, 0.8, 0.9],
+/*Stack(
+        children: [
+          LazyLoadScrollView(
+            scrollOffset: 5,
+            onEndOfPage: () => loadNextWidget(),
+            child: ListView.builder(
+              //scrollDirection: Axis.vertical,
+              //itemCount: sections.length,
+              itemBuilder: (context, position) {
+                return sections.elementAt(position);
+              },
             ),
           ),
-          child: Padding(
-            padding: EdgeInsets.all(20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  "About",
-                  style: GoogleFonts.raleway(
-                      fontWeight: FontWeight.w300,
-                      color: Colors.white,
-                      fontSize: 12),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      "assets/images/logo.png",
-                      height: 80,
-                    )
-                  ],
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Text(
-                    "Sign up",
-                    style: GoogleFonts.raleway(
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
-                        fontSize: 12),
-                  ),
-                ),
-                SizedBox(
-                  width: screenSize.width / 50,
-                ),
-              ],
-            ),
+          /*Positioned(
+            bottom: 0,
+            left: 30,
+            child: SocialBar(),
           ),
-        ),
+          Positioned(
+            bottom: 0,
+            right: 30,
+            child: EmailBar(),
+          )*/
+        ],
       ),*/

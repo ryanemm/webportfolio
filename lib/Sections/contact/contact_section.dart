@@ -4,6 +4,7 @@ import 'package:webportfolio/Sections/service/components/section_title.dart';
 import 'package:webportfolio/constants.dart';
 import "package:webportfolio/Sections/contact/components/social_card.dart";
 import "package:webportfolio/Sections/contact/components/social_card_mobile.dart";
+import "package:delayed_display/delayed_display.dart";
 
 class ContactSection extends StatelessWidget {
   const ContactSection({
@@ -28,18 +29,22 @@ class ContactSection extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.grey[50],
         ),
-        child: Column(
-          children: [
-            SizedBox(height: kDefaultPadding),
-            SectionTitle(
-              title: "Contact Me",
-              subtitle: "For project inquiry and information",
-              color: Color(0xFF00B1FF),
-              ftSize: 55,
-            ),
-            SizedBox(height: kDefaultPadding * 0.5),
-            ContactBox()
-          ],
+        child: DelayedDisplay(
+          delay: Duration(seconds: 5),
+          fadeIn: true,
+          child: Column(
+            children: [
+              SizedBox(height: kDefaultPadding),
+              SectionTitle(
+                title: "Contact Me",
+                subtitle: "For project inquiry and information",
+                color: Color(0xFF00B1FF),
+                ftSize: 55,
+              ),
+              SizedBox(height: kDefaultPadding * 0.5),
+              ContactBox()
+            ],
+          ),
         ),
       );
     } else {

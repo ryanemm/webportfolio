@@ -9,8 +9,12 @@ import "package:webportfolio/components/hire_me.dart";
 class FeedbackSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size _screenSize = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.symmetric(vertical: kDefaultPadding * 2.5),
+      padding: EdgeInsets.symmetric(
+        vertical: kDefaultPadding * 2.5,
+        horizontal: _screenSize.width * 0.1,
+      ),
       constraints: BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
@@ -27,7 +31,7 @@ class FeedbackSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: List.generate(
               feedbacks.length,
-              (index) => FeedbackCard(index: index),
+              (index) => FeedbackCard(index: index, showDuration: index + 1),
             ),
           ),
         ],

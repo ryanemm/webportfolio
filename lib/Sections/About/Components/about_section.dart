@@ -5,6 +5,7 @@ import "package:webportfolio/Sections/About/Components/about_text_with_sign.dart
 import "package:webportfolio/Sections/About/Components/experience_card.dart";
 import "package:webportfolio/Sections/About/Components/about_section_text.dart";
 import "package:webportfolio/Sections/About/Components/my_outline_button.dart";
+import "package:delayed_display/delayed_display.dart";
 
 class AboutSection extends StatelessWidget {
   @override
@@ -30,8 +31,13 @@ class AboutSection extends StatelessWidget {
                       text:
                           "Lorem ipsum dolor sit amet, consectetur dgsdf elit, sed fo eiusmod tempor inciduntut ut wingardium leviosa expecto patronum. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto. Thsh skkdf crotore por lae vincitor sdgfj fritres undur parcur magnofacto  "),
                 ),
-                ExperienceCard(
-                  numOfExp: "10",
+                DelayedDisplay(
+                  delay: Duration(seconds: 4),
+                  fadeIn: true,
+                  slidingCurve: Curves.easeInCirc,
+                  child: ExperienceCard(
+                    numOfExp: "10",
+                  ),
                 ),
                 Expanded(
                   child: AboutSectionText(
