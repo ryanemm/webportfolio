@@ -13,7 +13,7 @@ class EmailBar extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                "built by emersonryant@gmail.com",
+                "built by Ryan Emerson ",
                 style: GoogleFonts.raleway(
                   fontWeight: FontWeight.w600,
                   fontSize: 18,

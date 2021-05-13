@@ -39,23 +39,41 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      /*appBar: PreferredSize(
+      appBar: PreferredSize(
         preferredSize: Size(
           screenSize.width,
           screenSize.height * 0.15,
         ),
         child: CustomAppBar(),
-      ),*/
-      body: buildList(),
+      ),
+      body: Container(
+        child: Stack(children: [
+          buildList(),
+          Positioned(
+            bottom: 0,
+            left: 30,
+            child: SocialBar(),
+          ),
+          Positioned(
+            bottom: 0,
+            right: 30,
+            child: EmailBar(),
+          )
+        ]),
+      ),
     );
   }
 
   Widget buildList() {
-    return ListView.builder(
-      itemCount: 7,
-      itemBuilder: (BuildContext context, int index) {
-        return sectionsBank.elementAt(index);
-      },
+    return Scrollbar(
+      isAlwaysShown: true,
+      showTrackOnHover: true,
+      child: ListView.builder(
+        itemCount: 7,
+        itemBuilder: (BuildContext context, int index) {
+          return sectionsBank.elementAt(index);
+        },
+      ),
     );
   }
 }
